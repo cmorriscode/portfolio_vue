@@ -5,6 +5,42 @@
         <p>CMorris Code</p>
       </div>
       <div class="navbar-list">
+        <div class="hamburger" @click="toggleHamburger">
+          <div class="hamburger-icon" :class="{ open: hamburgerOpen }"></div>
+          <ul v-if="false">
+            <li
+              @mouseover="hoverOverHome"
+              @mouseleave="hoverOutHome"
+              :class="{
+                isHover: navHoverHome,
+                isHoverOut: navHoverOutHome,
+              }"
+            >
+              <router-link to="/home">Home</router-link>
+            </li>
+
+            <li
+              @mouseover="hoverOverProjects"
+              @mouseleave="hoverOutProjects"
+              :class="{
+                isHover: navHoverProjects,
+                isHoverOut: navHoverOutProjects,
+              }"
+            >
+              <router-link to="/projects">Projects</router-link>
+            </li>
+            <li
+              @mouseover="hoverOverContact"
+              @mouseleave="hoverOutContact"
+              :class="{
+                isHover: navHoverContact,
+                isHoverOut: navHoverOutContact,
+              }"
+            >
+              <router-link to="/contact">Contact</router-link>
+            </li>
+          </ul>
+        </div>
         <ul>
           <li
             @mouseover="hoverOverHome"
@@ -16,20 +52,7 @@
           >
             <router-link to="/home">Home</router-link>
           </li>
-          <!-- <li
-            @mouseover="hoverOverAbout"
-            @mouseleave="hoverOutAbout"
-            :class="{ isHover: navHoverAbout, isHoverOut: navHoverOutAbout }"
-          >
-            <router-link to="/about">About</router-link>
-          </li>
-          <li
-            @mouseover="hoverOverSkills"
-            @mouseleave="hoverOutSkills"
-            :class="{ isHover: navHoverSkills, isHoverOut: navHoverOutSkills }"
-          >
-            <router-link to="/skills">Skills</router-link>
-          </li> -->
+
           <li
             @mouseover="hoverOverProjects"
             @mouseleave="hoverOutProjects"
@@ -62,14 +85,12 @@ export default {
     return {
       navHoverHome: false,
       navHoverOutHome: false,
-      navHoverAbout: false,
-      navHoverOutAbout: false,
-      navHoverSkills: false,
-      navHoverOutSkills: false,
+
       navHoverProjects: false,
       navHoverOutProjects: false,
       navHoverContact: false,
       navHoverOutContact: false,
+      hamburgerOpen: false,
     };
   },
   methods: {
@@ -82,23 +103,7 @@ export default {
       this.navHoverHome = false;
       this.navHoverOutHome = true;
     },
-    hoverOverAbout() {
-      this.navHoverAbout = true;
-      this.navHoverOutAbout = false;
-      console.log(this.navHover);
-    },
-    hoverOutAbout() {
-      this.navHoverAbout = false;
-      this.navHoverOutAbout = true;
-    },
-    hoverOverSkills() {
-      this.navHoverSkills = true;
-      this.navHoverOutSkills = false;
-    },
-    hoverOutSkills() {
-      this.navHoverSkills = false;
-      this.navHoverOutSkills = true;
-    },
+
     hoverOverProjects() {
       this.navHoverProjects = true;
       this.navHoverOutProjects = false;
@@ -115,6 +120,9 @@ export default {
       this.navHoverContact = false;
       this.navHoverOutContact = true;
     },
+    toggleHamburger() {
+      this.hamburgerOpen = !this.hamburgerOpen;
+    },
   },
 };
 
@@ -125,36 +133,26 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.querySelector(".navbar").style.padding = "16px 8px";
-    // document.getElementById("logo").style.fontSize = "25px";
-    // document.querySelector(".header").style.background = "#000";
-    // document.querySelector(".navbar").style.borderBottom = "1px solid #d5d5d5";
   } else {
     document.querySelector(".navbar").style.padding = "24px 24px 16px";
-    // document.getElementById("logo").style.fontSize = "35px";
-    // document.querySelector(".header").style.background = "#FFF";
-    // document.querySelector(".navbar").style.borderBottom = "2px solid #2b2b2b";
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .header {
-  border-bottom: 1px solid #d5d5d5;
   border-bottom: 4px solid #2b2b2b;
-  // background: #f2f1ef;
-  // box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-  // background: #000000;
-  // position: relative;
+
   position: sticky;
   top: 0;
   left: 0;
   z-index: 30;
-  background: #fff;
-  background: #d5d5d5;
+
   background: #fefefe;
   .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 24px 24px 16px;
     transition: all 0.3s;
     &-logo {
@@ -207,8 +205,6 @@ function scrollFunction() {
     border-bottom: 2px solid #002627;
     animation: slideRight 0.15s ease-in forwards;
   }
-  // border-bottom: 2px solid #002627;
-  // transition: all 0.1s;
 }
 
 .isHoverOut {
@@ -231,19 +227,112 @@ function scrollFunction() {
     width: 50%;
   }
   100% {
-    width: 100%;
+    width: 80%;
   }
 }
 
 @keyframes slideLeft {
   0% {
-    width: 100%;
+    width: 80%;
   }
   50% {
     width: 50%;
   }
   100% {
     width: 0%;
+  }
+}
+
+// hamburger
+
+.hamburger {
+  cursor: pointer;
+  padding: 24px 4px;
+  display: none;
+  &-icon {
+    width: 38px;
+    height: 4px;
+    background: hsl(129, 82%, 30%);
+    position: relative;
+    transition: all 0.25s ease-in-out;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 34px;
+      height: 4px;
+      background: #000;
+      top: -10px;
+      right: 0;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 28px;
+      height: 4px;
+      background: #000;
+      top: 10px;
+      right: 0;
+    }
+
+    &.open {
+      width: 40px;
+      height: 4px;
+      background: hsl(129, 82%, 30%);
+      position: relative;
+      width: 24px;
+      height: 4px;
+
+      transform: rotate(45deg);
+      &::before {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 4px;
+        background: #000;
+        background: hsl(129, 82%, 30%);
+        top: -10px;
+        top: 0px;
+        right: 0;
+        transform: rotate(95deg);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 0px;
+        background: #000;
+        top: 10px;
+        right: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    .navbar {
+      &-list {
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: block;
+    transition: all 0.35s ease-in;
+
+    ul {
+      display: block !important;
+      margin-top: 32px;
+
+      li {
+        margin-top: 24px;
+      }
+    }
   }
 }
 </style>

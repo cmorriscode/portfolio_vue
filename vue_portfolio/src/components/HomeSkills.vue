@@ -2,7 +2,7 @@
   <section class="skills">
     <div class="skills-container">
       <div class="skills-header">
-        <h3><i class="fas fa-toolbox"></i> My Toolkit</h3>
+        <h3>My Toolkit</h3>
         <div class="hr"></div>
       </div>
       <div class="skills-card">
@@ -42,17 +42,11 @@
 
 <style lang="scss" scoped>
 .skills {
-  // clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%);
-  // margin-top: 92px;
-
   width: 100%;
   background: #fff;
   padding: 42px 24px;
 
   &-container {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // margin-top: 50px;
     max-width: 1400px;
     margin: 64px auto;
   }
@@ -77,23 +71,17 @@
 
   &-card {
     width: 100%;
-    // height: 400px;
-    // background: rebeccapurple;
-    // border: 2px solid #0e8b21;
-    // background: #fff;
+
     margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 32px auto;
     grid-gap: 24px;
 
-    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
     ul {
       padding: 24px 12px;
       display: flex;
       flex-direction: column;
-      // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      // align-items: center;
 
       &:last-of-type {
         li:last-of-type {
@@ -105,6 +93,71 @@
     li {
       font-size: 20px;
       margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .skills {
+    padding: 24px 24px;
+    &-container {
+    }
+
+    &-header {
+      h3 {
+        font-size: 42px;
+        letter-spacing: 2px;
+        font-weight: 400;
+      }
+      .hr {
+        width: 92px;
+        height: 8px;
+        margin: 16px auto;
+        background: green;
+        background: linear-gradient(120deg, #3cf73c, #002627);
+        clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
+      }
+    }
+
+    &-card {
+      width: 100%;
+
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 32px auto;
+      grid-gap: 0;
+      text-align: center;
+
+      ul {
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+
+        &:first-of-type {
+        }
+
+        &:last-of-type {
+          li:last-of-type {
+            color: #5d1212;
+            font-weight: 500;
+          }
+        }
+      }
+      li {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .skills {
+    &-header {
+      h3 {
+        font-size: 32px;
+      }
     }
   }
 }

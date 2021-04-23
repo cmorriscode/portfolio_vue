@@ -1,6 +1,7 @@
 <template>
   <div class="project" :class="{ red: color === 'red' }">
     <div class="project-img">
+      <!-- <img :src="image" alt="" /> -->
       <img :src="image" alt="" />
     </div>
     <div class="project-content">
@@ -14,7 +15,7 @@
         {{ description }}
       </div>
       <div class="project-content--btns">
-        <main-btn class="spacer">View Site</main-btn>
+        <main-btn class="spacer" :link="link">View Site</main-btn>
         <main-btn class="outline">View Code</main-btn>
       </div>
     </div>
@@ -23,11 +24,16 @@
 
 <script>
 export default {
-  props: ["color", "title", "tech", "description", "image"],
+  props: ["color", "title", "tech", "description", "image", "link"],
 };
 </script>
 
 <style lang="scss" scoped>
+a {
+  &:visited {
+    color: #fff;
+  }
+}
 .red {
   border-color: #5d1212 !important;
 }
@@ -38,6 +44,7 @@ export default {
 
 .project {
   padding: 24px 20px;
+  padding: 32px 20px;
   max-width: 980px;
   margin: 48px auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
@@ -48,8 +55,11 @@ export default {
   border-radius: 4px;
 
   &-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      max-width: 300px;
+      max-width: 100%;
     }
   }
 

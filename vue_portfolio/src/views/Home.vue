@@ -1,16 +1,6 @@
 <template>
   <main class="main">
     <div class="hero">
-      <div class="code-img">
-        <!-- <img src="../assets/code.png" alt="" />
-          <div class="hr"></div> -->
-      </div>
-
-      <div class="brackets-img">
-        <!-- <img src="../assets/brackets.png" alt="" />
-        <div class="hr"></div> -->
-      </div>
-
       <div class="hero-title">
         <h1>Charlie Morris</h1>
         <!-- <div class="hr"></div> -->
@@ -60,21 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-enter-from {
-  opacity: 0;
-}
-
-.v-enter-active {
-  opacity: 0.5;
-  transition: all 0.5s ease-in;
-}
-
-.v-enter-to {
-  opacity: 1;
-}
 .main {
-  margin-top: 92px;
-  margin-top: 64px;
   margin-top: 48px;
 
   .hero {
@@ -82,12 +58,12 @@ export default {
     flex-direction: column;
     align-items: center;
     position: relative;
-    // background: linear-gradient(120deg, #c8f7c5, #fff);
+
     .hr {
       width: 64px;
       height: 6px;
       margin: 12px auto;
-      background: green;
+
       background: linear-gradient(
         120deg,
         rgba(60, 247, 60, 0.4),
@@ -96,42 +72,6 @@ export default {
       clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
     }
 
-    .brackets-img {
-      position: absolute;
-      right: 12%;
-      // right: 18%;
-      top: 120px;
-      top: 160px;
-      top: 200px;
-
-      img {
-        width: 105px;
-        // width: 900px;
-        // width: 140px;
-        // width: 180px;
-        // width: 225px;
-      }
-    }
-
-    .code-img {
-      position: absolute;
-      left: 11%;
-      // left: 18%;
-      top: 120px;
-      top: 160px;
-      top: 200px;
-      top: 0;
-      left: 310px;
-      left: 180px;
-      img {
-        width: 120px;
-        width: 1440px;
-        opacity: 0.6;
-        // width: 165px;
-        // width: 225px;
-        // width: 2px;
-      }
-    }
     &-img {
       img {
         width: 350px;
@@ -144,20 +84,13 @@ export default {
     }
 
     &-title {
-      // margin-top: 24px;
-      margin-bottom: 24px;
-      margin-bottom: 24px;
       margin-bottom: 16px;
       h1 {
-        font-size: 48px;
         font-size: 62px;
 
-        font-weight: 400;
         font-weight: 500;
         letter-spacing: 4px;
-        color: hsl(129, 82%, 40%);
-        color: #12ba2b;
-        color: #0e8b21;
+
         color: hsl(129, 82%, 30%);
 
         font-family: "Rock Salt", cursive;
@@ -167,7 +100,7 @@ export default {
         width: 92px;
         height: 8px;
         margin: 8px auto;
-        background: green;
+
         background: linear-gradient(120deg, #3cf73c, #002627);
         clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
       }
@@ -200,7 +133,7 @@ export default {
 
       p {
         color: #555;
-        font-weight: 500;
+
         font-weight: 600;
       }
     }
@@ -209,9 +142,90 @@ export default {
       display: flex;
       justify-content: center;
 
-      button {
+      a {
         &:first-of-type {
           margin-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    margin-top: 48px;
+
+    .hero {
+      .hr {
+      }
+
+      &-img {
+        img {
+          width: 275px;
+          height: 275px;
+          border: 12px solid #152a23;
+
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+        }
+      }
+
+      &-title {
+        margin-bottom: 16px;
+        h1 {
+          font-size: 42px;
+
+          font-weight: 500;
+          letter-spacing: 4px;
+
+          font-family: "Rock Salt", cursive;
+          text-align: center;
+        }
+      }
+      &-icons {
+        display: flex;
+        font-size: 32px;
+        margin-top: 20px;
+        &--linkedin {
+          margin-right: 16px;
+
+          .fab {
+            color: #0a66c2;
+          }
+        }
+        &--github {
+          .fab {
+            color: #4078c0;
+          }
+        }
+      }
+      &-tagline {
+        margin-top: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        p {
+          font-size: 16px;
+          color: #555;
+
+          font-weight: 600;
+        }
+      }
+      &-btns {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          &:first-of-type {
+            margin-right: 0;
+            margin-bottom: 12px;
+          }
         }
       }
     }
