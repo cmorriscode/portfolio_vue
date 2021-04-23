@@ -1,13 +1,15 @@
 <template>
   <header class="header">
     <nav class="navbar">
-      <div class="navbar-logo">
-        <p>CMorris Code</p>
-      </div>
-      <div class="navbar-list">
-        <div class="hamburger" @click="toggleHamburger">
-          <div class="hamburger-icon" :class="{ open: hamburgerOpen }"></div>
-          <ul v-if="false">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <p>CMorris Code</p>
+        </div>
+        <div class="navbar-list">
+          <div class="hamburger" @click="toggleHamburger">
+            <div class="hamburger-icon" :class="{ open: hamburgerOpen }"></div>
+          </div>
+          <ul>
             <li
               @mouseover="hoverOverHome"
               @mouseleave="hoverOutHome"
@@ -41,40 +43,44 @@
             </li>
           </ul>
         </div>
-        <ul>
-          <li
-            @mouseover="hoverOverHome"
-            @mouseleave="hoverOutHome"
-            :class="{
-              isHover: navHoverHome,
-              isHoverOut: navHoverOutHome,
-            }"
-          >
-            <router-link to="/home">Home</router-link>
-          </li>
-
-          <li
-            @mouseover="hoverOverProjects"
-            @mouseleave="hoverOutProjects"
-            :class="{
-              isHover: navHoverProjects,
-              isHoverOut: navHoverOutProjects,
-            }"
-          >
-            <router-link to="/projects">Projects</router-link>
-          </li>
-          <li
-            @mouseover="hoverOverContact"
-            @mouseleave="hoverOutContact"
-            :class="{
-              isHover: navHoverContact,
-              isHoverOut: navHoverOutContact,
-            }"
-          >
-            <router-link to="/contact">Contact</router-link>
-          </li>
-        </ul>
       </div>
+      <ul class="hamburgerMenu" v-if="hamburgerOpen">
+        <li
+          @mouseover="hoverOverHome"
+          @mouseleave="hoverOutHome"
+          :class="{
+            isHover: navHoverHome,
+            isHoverOut: navHoverOutHome,
+          }"
+        >
+          <router-link to="/home" @click="closeHamburger">Home</router-link>
+        </li>
+
+        <li
+          @mouseover="hoverOverProjects"
+          @mouseleave="hoverOutProjects"
+          :class="{
+            isHover: navHoverProjects,
+            isHoverOut: navHoverOutProjects,
+          }"
+        >
+          <router-link to="/projects" @click="closeHamburger"
+            >Projects</router-link
+          >
+        </li>
+        <li
+          @mouseover="hoverOverContact"
+          @mouseleave="hoverOutContact"
+          :class="{
+            isHover: navHoverContact,
+            isHoverOut: navHoverOutContact,
+          }"
+        >
+          <router-link to="/contact" @click="closeHamburger"
+            >Contact</router-link
+          >
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -123,6 +129,9 @@ export default {
     toggleHamburger() {
       this.hamburgerOpen = !this.hamburgerOpen;
     },
+    closeHamburger() {
+      this.hamburgerOpen = false;
+    },
   },
 };
 
@@ -150,11 +159,17 @@ function scrollFunction() {
 
   background: #fefefe;
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
     padding: 24px 24px 16px;
     transition: all 0.3s;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     &-logo {
       p {
         color: hsl(129, 82%, 30%);
@@ -227,13 +242,13 @@ function scrollFunction() {
     width: 50%;
   }
   100% {
-    width: 80%;
+    width: 100%;
   }
 }
 
 @keyframes slideLeft {
   0% {
-    width: 80%;
+    width: 100%;
   }
   50% {
     width: 50%;
@@ -324,13 +339,38 @@ function scrollFunction() {
   .hamburger {
     display: block;
     transition: all 0.35s ease-in;
+  }
+}
+ul.hamburgerMenu {
+  // display: block !important;
+  // margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    ul {
-      display: block !important;
-      margin-top: 32px;
+  align-items: center;
+  transition: all 0.35s;
 
-      li {
-        margin-top: 24px;
+  li {
+    margin: 16px;
+
+    a {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.35s ease-out;
+
+      color: hsl(129, 82%, 30%);
+      &:hover {
+        color: #0e8b21;
+        color: hsl(129, 82%, 40%);
+      }
+
+      &.router-link-active {
+        color: hsl(129, 82%, 30%);
+        color: hsl(129, 82%, 40%);
+        padding-bottom: 1px;
+        border-bottom: 2px solid #002627;
       }
     }
   }
