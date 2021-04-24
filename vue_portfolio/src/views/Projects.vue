@@ -72,9 +72,9 @@ export default {
           tech: "HTML, CSS (SCSS), Vanilla JavaScript",
           description:
             "Customized website built from scratch with collaboration from the client/artist. I aimed to create a modern and clean web design to highlight the client's artwork and storytelling. Custom image carousel built with JavaScript. Image compression used for faster loading times without compromising quality. Code not made public for privacy reasons. Website will be expanded with new features and frequent updates.",
-          image: "https://charlesmorris.com/img/christines_cartoons.jpg",
+          image: "https://bombyxweb.com/imgs/bombyx.jpg",
           color: "green",
-          link: "https://bombyx.com/imgs/bombyx.jpg",
+          link: "https://christinescartoons.com",
         },
       ],
     };
