@@ -54,7 +54,7 @@ export default {
           tech: "HTML, CSS (SCSS), JS (Vue)",
           description:
             "The website you're currently viewing. This is a single page application designed and coded from scratch with Vue JS. No pre-built themes were used - just tips and tricks I've picked up along my journey with my own aesthetic mixed in. I was aiming for a modern and visually pleasing user experience while highlighting my abilities in Web Development. I appreciate you visiting!",
-          image: "https://charlesmorris.com/portfolio_ss.png",
+          image: "https://charlesmorris.com/img/portfolio_ss.png",
           color: "dark",
         },
         {
