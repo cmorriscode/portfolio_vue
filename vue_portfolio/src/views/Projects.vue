@@ -49,6 +49,7 @@ export default {
 
   data() {
     return {
+     
       projects: [
         {
           title: "My Portfolio Website",

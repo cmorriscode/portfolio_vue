@@ -22,11 +22,11 @@ export default {
 <style lang="scss">
 .v-enter-from {
   opacity: 0;
-  transform: translateY(-700px) scale(0.7);
+  transform: translateX(-700px) scale(0.7);
 }
 
 .v-enter-active {
-  transition: all 0.6s ease-in;
+  transition: all 0.35s ease-in;
   opacity: 0.5;
   transform: translateX(-3500px) scale(0.85);
   overflow: hidden;
@@ -43,7 +43,7 @@ export default {
 }
 
 .v-leave-active {
-  transition: all 0.6s ease-out;
+  transition: all 0.35s ease-out;
   opacity: 0.5;
   transform: translateX(350px) scale(0.7);
   overflow: hidden;

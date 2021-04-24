@@ -3,19 +3,15 @@
     <div class="hero">
       <div class="hero-title">
         <h1>Charlie Morris</h1>
-        <!-- <div class="hr"></div> -->
       </div>
       <div class="hero-img">
-        <img
-          src="https://avatars.githubusercontent.com/u/67357037?v=4"
-          alt=""
-        />
+        <img src="https://avatars.githubusercontent.com/u/67357037?v=4" alt />
       </div>
       <div class="hero-icons">
         <div class="hero-icons--linkedin">
           <a href="https://www.linkedin.com/in/cmorriscode/">
-            <i class="fab fa-linkedin linkedin"></i
-          ></a>
+            <i class="fab fa-linkedin linkedin"></i>
+          </a>
         </div>
         <div class="hero-icons--github github">
           <a href="https://github.com/cmorriscode">
@@ -50,6 +46,7 @@ export default {
     HomeAbout,
     HomeSkills,
   },
+ 
 };
 </script>
 

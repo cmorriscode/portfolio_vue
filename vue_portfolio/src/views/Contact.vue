@@ -10,13 +10,12 @@
             Thanks for viewing my site! I'd love to hear from you. Want to
             collaborate, connect, or provide any feedback? Great. Please get in
             touch with me through email at
-            <span>{{ email }}</span
-            >.
+            <span>{{ email }}</span>.
           </p>
         </div>
 
         <div class="logo-img">
-          <img src="../assets/cm_logo.png" alt="" />
+          <img src="../assets/cm_logo.png" alt />
         </div>
       </div>
     </div>
@@ -30,6 +29,7 @@ export default {
       email: "cmorriscode@gmail.com",
     };
   },
+ 
 };
 </script>
 
