@@ -13,10 +13,14 @@
       </div>
       <div class="hero-icons">
         <div class="hero-icons--linkedin">
-          <i class="fab fa-linkedin linkedin"></i>
+          <a href="https://www.linkedin.com/in/cmorriscode/">
+            <i class="fab fa-linkedin linkedin"></i
+          ></a>
         </div>
         <div class="hero-icons--github github">
-          <i class="fab fa-github-square"></i>
+          <a href="https://github.com/cmorriscode">
+            <i class="fab fa-github-square"></i>
+          </a>
         </div>
       </div>
       <div class="hero-tagline">
@@ -113,11 +117,13 @@ export default {
         margin-right: 16px;
 
         .fab {
+          cursor: pointer;
           color: #0a66c2;
         }
       }
       &--github {
         .fab {
+          cursor: pointer;
           color: #4078c0;
         }
       }

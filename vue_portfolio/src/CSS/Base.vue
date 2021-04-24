@@ -11,9 +11,7 @@ html {
 
 body {
   padding: 0 24px;
-  // display: flex;
-  // flex-direction: column;
-  // min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {

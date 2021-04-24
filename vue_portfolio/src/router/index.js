@@ -6,12 +6,9 @@ import Contact from "../views/Contact.vue";
 const routes = [
   {
     path: "/",
-    redirect: "Home",
-  },
-  {
-    path: "/home",
     component: Home,
   },
+
   {
     path: "/projects",
     component: Projects,
@@ -20,12 +17,19 @@ const routes = [
     path: "/contact",
     component: Contact,
   },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/",
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
+    console.log(to);
+    console.log(from);
+    console.log(savedPosition);
     if (savedPosition) {
       return savedPosition;
     } else {

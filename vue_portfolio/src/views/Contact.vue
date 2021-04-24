@@ -51,9 +51,7 @@ export default {
         font-size: 48px;
         font-weight: 400;
         letter-spacing: 2px;
-        color: #ffd700;
-        color: #0e8b21;
-        color: #00ff00;
+
         color: #3c1362;
       }
     }
@@ -88,15 +86,37 @@ export default {
           font-size: 32px;
           font-weight: 400;
           letter-spacing: 2px;
-          color: #ffd700;
-          color: #0e8b21;
-          color: #00ff00;
           color: #3c1362;
         }
       }
       &-text {
         p {
           font-size: 18px;
+        }
+      }
+      .logo-img {
+        display: flex;
+        justify-content: center;
+        padding: 48px 24px;
+        img {
+          width: 320px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    .contact {
+      .logo-img {
+        display: flex;
+        justify-content: center;
+        padding: 48px 24px;
+        img {
+          width: 270px;
+          max-width: 100%;
         }
       }
     }

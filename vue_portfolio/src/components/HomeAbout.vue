@@ -77,14 +77,12 @@ export default {
 <style lang="scss" scoped>
 // ABOUT
 .about {
-  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
   margin-top: 92px;
 
   width: 100%;
   background: #f2f1ef;
   padding: 42px 24px;
-  // border-bottom: 1px solid green;
 
   &-container {
     display: grid;
@@ -104,8 +102,7 @@ export default {
         font-weight: 400;
         font-family: "Rock Salt", cursive;
         line-height: 2;
-        color: hsl(129, 82%, 80%);
-        color: #12ba2b;
+
         color: #222;
       }
 
@@ -120,18 +117,13 @@ export default {
           width: 100%;
           height: 32px;
           border-radius: 4px;
-          // background: #12ba2b4d;
 
-          background: #ffd700;
-          background: #550055;
-          background: rgba(96, 0, 0, 0.3);
           background: #fde3a7;
           z-index: -500;
         }
       }
 
       p.about-info--header-2 {
-        // color: hsl(129, 82%, 40%);
         text-align: center;
 
         transform: rotate(6deg);
@@ -140,24 +132,15 @@ export default {
       }
 
       p.about-info--header-3 {
-        // color: #f5d76e;
-
         transform: rotate(-8deg);
         color: #8f8f8f;
       }
       p.about-info--header-4 {
-        // color: #3b0053;
-
         text-align: right;
         transform: rotate(-12deg);
         color: #8f8f8f;
       }
       p.about-info--header-5 {
-        // color: #551700;
-        // color: #f5d76e;
-        // color: #f5d76e;
-        // color: hsl(129, 82%, 40%);
-
         text-align: center;
         transform: rotate(14deg);
         color: #8f8f8f;
@@ -172,11 +155,10 @@ export default {
     padding: 24px 20px;
     border-radius: 8px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-    background: hsl(129, 82%, 80%);
+
     background: #fff;
-    border-top: 8px solid #12ba2b;
+
     border-top: 12px solid #2b2b2b;
-    // color: #fff;
 
     align-items: center;
 
@@ -189,7 +171,7 @@ export default {
       width: 92px;
       height: 6px;
       margin: 16px auto;
-      background: green;
+
       background: linear-gradient(120deg, #3cf73c, #002627);
       clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
     }
@@ -199,8 +181,6 @@ export default {
       color: #444;
 
       & span {
-        color: #7fffd4;
-        color: #00008b;
         color: #12ba2b;
         font-weight: 600;
       }
@@ -209,7 +189,7 @@ export default {
         font-size: 20px;
         margin-top: 24px;
         padding-left: 12px;
-        border-left: 6px solid #002a2a;
+
         border-left: 6px solid #12ba2b;
         letter-spacing: 1px;
         color: #333;
