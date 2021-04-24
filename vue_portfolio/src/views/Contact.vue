@@ -16,7 +16,7 @@
         </div>
 
         <div class="logo-img">
-          <img src="../assets/logo_v3.png" alt="" />
+          <img src="../assets/cm_logo.png" alt="" />
         </div>
       </div>
     </div>
