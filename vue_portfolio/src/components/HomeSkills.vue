@@ -61,7 +61,7 @@
     }
     .hr {
       width: 92px;
-      height: 8px;
+      height: 6px;
       margin: 16px auto;
       background: green;
       background: linear-gradient(120deg, #3cf73c, #002627);
@@ -108,14 +108,6 @@
         font-size: 42px;
         letter-spacing: 2px;
         font-weight: 400;
-      }
-      .hr {
-        width: 92px;
-        height: 8px;
-        margin: 16px auto;
-        background: green;
-        background: linear-gradient(120deg, #3cf73c, #002627);
-        clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
       }
     }
 

@@ -21,6 +21,8 @@
           </div>
 
           <div class="websites">
+            <h3>Websites</h3>
+            <div class="underline"></div>
             <project-cmp
               v-for="proj in projects"
               :color="proj.color"
@@ -53,6 +55,7 @@ export default {
           description:
             "The website you're currently viewing. Designed and coded from scratch. No themes were used - just tips and tricks I've picked up along my journey with my own aesthetic mixed in. I was aiming for a modern and visually pleasing user experience while highlighting my abilities in Web Development. Designed to be fully responsive and accessible to all users.",
           image: "../assets/logo.png",
+          color: "dark",
         },
         {
           title: "Bombyx Web",
@@ -70,6 +73,8 @@ export default {
           description:
             "Customized website built from scratch with collaboration from the client/artist. I aimed to create a modern and clean web design to highlight the client's artwork and storytelling. Custom image carousel built with JavaScript. Image compression used for faster loading times without compromising quality. Code not made public for privacy reasons. Website will be expanded with new features and frequent updates.",
           image: "https://charlesmorris.com/img/christines_cartoons-2.jpg",
+          color: "green",
+          link: "https://christinescartoons.com",
         },
       ],
     };
@@ -96,7 +101,7 @@ export default {
     padding-left: 8px;
 
     p {
-      font-size: 36px;
+      font-size: 52px;
       line-height: 1.4;
     }
   }
@@ -109,6 +114,27 @@ export default {
     margin: 0 auto;
   }
 
+  .websites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      display: none;
+      font-weight: 500;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .underline {
+      display: none;
+      margin: 6px auto;
+      width: 46px;
+      height: 4px;
+      background: #002a15;
+    }
+  }
+
   .projects {
     padding: 0px 24px 48px;
     &-header {
@@ -118,8 +144,63 @@ export default {
         font-size: 48px;
         font-weight: 400;
         letter-spacing: 2px;
-        color: hsl(129, 82%, 30%);
+        color: #0e8b21;
         color: #ffd700;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .websites-separator {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .website-text {
+    display: none;
+
+    // align-items: center;
+    // justify-content: center;
+    padding: 24px 48px;
+
+    &--div {
+      text-align: center;
+      border-left: 4px solid #002a15;
+      padding-left: 8px;
+
+      p {
+        font-size: 52px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .main {
+    margin-top: 48px;
+
+    .websites {
+      h3 {
+        display: block;
+      }
+
+      .underline {
+        display: block;
+      }
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .projects {
+      padding: 0px 8px 48px;
+      &-header {
+        h1 {
+          font-size: 32px;
+        }
+        margin-bottom: 48px;
       }
     }
   }

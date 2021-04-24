@@ -3,7 +3,7 @@
     <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-logo">
-          <p>CMorris Code</p>
+          <img src="../assets/logo_v3.png" alt="" />
         </div>
         <div class="navbar-list">
           <div class="hamburger" @click="toggleHamburger">
@@ -141,9 +141,11 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.querySelector(".navbar").style.padding = "16px 8px";
+    document.querySelector(".navbar").style.padding = "16px 8px 8px";
+    document.querySelector(".navbar-logo img").style.width = "48px";
   } else {
     document.querySelector(".navbar").style.padding = "24px 24px 16px";
+    document.querySelector(".navbar-logo img").style.width = "56px";
   }
 }
 </script>
@@ -172,8 +174,12 @@ function scrollFunction() {
     }
     &-logo {
       p {
-        color: hsl(129, 82%, 30%);
+        color: #0e8b21;
         font-weight: 700;
+      }
+      img {
+        // transition: all 0.35s ease-in;
+        width: 56px;
       }
     }
     &-list {
@@ -325,7 +331,7 @@ function scrollFunction() {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .header {
     .navbar {
       &-list {

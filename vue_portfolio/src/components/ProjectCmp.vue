@@ -1,12 +1,27 @@
 <template>
-  <div class="project" :class="{ red: color === 'red' }">
+  <div
+    class="project"
+    :class="{
+      dark: color === 'dark',
+      red: color === 'red',
+      green: color === 'green',
+    }"
+  >
     <div class="project-img">
       <!-- <img :src="image" alt="" /> -->
       <img :src="image" alt="" />
     </div>
     <div class="project-content">
       <div class="project-content--title">
-        <h4 :class="{ redText: color === 'red' }">{{ title }}</h4>
+        <h4
+          :class="{
+            redText: color === 'red',
+            darkText: color === 'dark',
+            greenText: color === 'green',
+          }"
+        >
+          {{ title }}
+        </h4>
       </div>
       <div class="project-content--tech">
         <p>{{ tech }}</p>
@@ -34,6 +49,13 @@ a {
     color: #fff;
   }
 }
+.dark {
+  border-color: #2b2b2b !important;
+}
+
+.dark-text {
+  color: #2b2b2b !important;
+}
 .red {
   border-color: #5d1212 !important;
 }
@@ -42,12 +64,20 @@ a {
   color: #5d1212 !important;
 }
 
+.green {
+  border-color: #12ba2b !important;
+}
+
+.greenText {
+  color: #12ba2b !important;
+}
+
 .project {
   padding: 24px 20px;
   padding: 32px 20px;
   max-width: 980px;
   margin: 48px auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   display: grid;
   grid-gap: 36px;
   grid-template-columns: 1fr 2fr;
@@ -59,7 +89,9 @@ a {
     justify-content: center;
     align-items: center;
     img {
+      min-width: 240px;
       max-width: 100%;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -83,9 +115,10 @@ a {
     }
 
     &--description {
-      padding: 12px 6px;
-      background: #efefef;
+      padding: 12px 12px;
+      background: #f3f2f2;
       border-radius: 4px;
+      line-height: 1.4;
     }
 
     &--btns {
@@ -100,6 +133,77 @@ a {
       a {
         &:first-of-type {
           margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .project {
+    padding: 24px 20px;
+    padding: 32px 20px;
+    max-width: 980px;
+    margin: 48px auto;
+    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-gap: 36px;
+    grid-template-columns: 1fr;
+    border-top: 8px solid #12ba2b;
+    border-radius: 4px;
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        min-width: 200px;
+        max-width: 80%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &-content {
+      &--title {
+        h4 {
+          text-align: right;
+          font-size: 24px;
+          font-weight: 600;
+          color: #444;
+          text-align: center;
+        }
+        margin-bottom: 12px;
+      }
+      &--tech {
+        p {
+          text-align: center;
+          margin-bottom: 16px;
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      &--description {
+        padding: 12px 12px;
+        background: #efefef;
+        border-radius: 4px;
+      }
+
+      &--btns {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .spacer {
+          margin-right: 24px;
+        }
+
+        a {
+          &:first-of-type {
+            margin-right: 0px;
+            margin-bottom: 16px;
+          }
         }
       }
     }

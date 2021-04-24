@@ -17,9 +17,10 @@
         <h2>About</h2>
         <div class="hr"></div>
         <p>
-          Thanks for visiting. I'm a Front End Web Developer who's passionate
-          about elevating the UI and UX of everything I work on. I believe
-          things should look better. All the things.
+          Thanks for visiting. I'm a <span>Front</span> <span>End</span>
+          <span> Web</span> <span>Developer</span> who's passionate about
+          elevating the UI and UX of everything I work on. I believe things
+          should look better. All the things.
         </p>
         <p>
           I'm proficient in the core front end technologies - HTML, CSS, and
@@ -28,11 +29,7 @@
           improving the look, feel, and overall user experience across our
           product line.
         </p>
-        <p>
-          I'm also a lifelong musician with a strong interest in philosophy.
-          Both of those parts of my brain - creative and logical - have found a
-          perfect marriage in web development.
-        </p>
+
         <router-link to="/contact">
           <main-btn class="outline">Let's Collaborate!</main-btn>
         </router-link>
@@ -56,6 +53,8 @@ export default {
         "Email.",
         "Logos.",
         "Thinker.",
+        "Listener.",
+        "Collaborator.",
       ],
     };
   },
@@ -106,6 +105,9 @@ export default {
         font-weight: 400;
         font-family: "Rock Salt", cursive;
         line-height: 2;
+        color: hsl(129, 82%, 80%);
+        color: #12ba2b;
+        color: #222;
       }
 
       .highlight {
@@ -135,18 +137,21 @@ export default {
 
         transform: rotate(6deg);
         margin-top: 24px;
+        color: #8f8f8f;
       }
 
       p.about-info--header-3 {
         // color: #f5d76e;
 
         transform: rotate(-8deg);
+        color: #8f8f8f;
       }
       p.about-info--header-4 {
         // color: #3b0053;
 
         text-align: right;
         transform: rotate(-12deg);
+        color: #8f8f8f;
       }
       p.about-info--header-5 {
         // color: #551700;
@@ -156,6 +161,7 @@ export default {
 
         text-align: center;
         transform: rotate(14deg);
+        color: #8f8f8f;
       }
     }
   }
@@ -170,6 +176,7 @@ export default {
     background: hsl(129, 82%, 80%);
     background: #fff;
     border-top: 8px solid #12ba2b;
+    border-top: 12px solid #2b2b2b;
     // color: #fff;
 
     align-items: center;
@@ -181,7 +188,7 @@ export default {
     }
     .hr {
       width: 92px;
-      height: 8px;
+      height: 6px;
       margin: 16px auto;
       background: green;
       background: linear-gradient(120deg, #3cf73c, #002627);
@@ -190,8 +197,21 @@ export default {
     p {
       font-size: 18px;
       margin-bottom: 24px;
+      color: #444;
+
+      & span {
+        color: #7fffd4;
+        color: #00008b;
+      }
+
       &:first-of-type {
+        font-size: 20px;
         margin-top: 24px;
+        padding-left: 12px;
+        border-left: 6px solid #002a2a;
+        border-left: 6px solid #12ba2b;
+        letter-spacing: 1px;
+        color: #333;
       }
 
       &:last-of-type {
@@ -274,14 +294,7 @@ export default {
       h2 {
         font-size: 42px;
       }
-      .hr {
-        width: 92px;
-        height: 8px;
-        margin: 16px auto;
-        background: green;
-        background: linear-gradient(120deg, #3cf73c, #002627);
-        clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
-      }
+
       p {
         font-size: 16px;
         margin-bottom: 24px;
@@ -329,14 +342,7 @@ export default {
       h2 {
         font-size: 32px;
       }
-      .hr {
-        width: 92px;
-        height: 8px;
-        margin: 16px auto;
-        background: green;
-        background: linear-gradient(120deg, #3cf73c, #002627);
-        clip-path: polygon(100% 0, 99% 2%, 52% 99%, 0 3%, 0 0);
-      }
+
       p {
         font-size: 16px;
       }
