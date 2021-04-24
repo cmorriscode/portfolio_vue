@@ -17,16 +17,15 @@
         <h2>About</h2>
         <div class="hr"></div>
         <p>
-          Thanks for visiting. I'm a <span>Front</span> <span>End</span>
-          <span> Web</span> <span>Developer</span> who's passionate about
-          elevating the UI and UX of everything I work on. I believe things
-          should look better. All the things.
+          Thanks for visiting. I'm a <span>Front End Web Developer</span> who's
+          passionate about elevating the UI and UX of everything I work on. I
+          believe things should look better. All the things.
         </p>
         <p>
           I'm proficient in the core front end technologies - HTML, CSS, and
           JavaScript. Professionally, I spend my time everyday designing and
           developing web pages and components for clients with the goal of
-          improving the look, feel, and overall user experience across our
+          improving the look, feel, and overall user experience across the
           product line.
         </p>
 
@@ -202,6 +201,8 @@ export default {
       & span {
         color: #7fffd4;
         color: #00008b;
+        color: #12ba2b;
+        font-weight: 600;
       }
 
       &:first-of-type {

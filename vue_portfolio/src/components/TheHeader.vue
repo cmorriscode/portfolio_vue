@@ -3,7 +3,9 @@
     <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-logo">
-          <img src="../assets/logo_v3.png" alt="" />
+          <router-link to="/">
+            <img src="../assets/logo_v3.png" alt="" />
+          </router-link>
         </div>
         <div class="navbar-list">
           <div class="hamburger" @click="toggleHamburger">

@@ -100,7 +100,7 @@ a {
       h4 {
         text-align: right;
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 500;
         color: #444;
       }
       margin-bottom: 12px;

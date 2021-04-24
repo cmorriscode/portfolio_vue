@@ -22,36 +22,36 @@ export default {
 <style lang="scss">
 .v-enter-from {
   opacity: 0;
-  transform: translateY(-400px) scale(0.8);
+  transform: translateY(-700px) scale(0.7);
 }
 
 .v-enter-active {
-  transition: all 0.4s ease-in;
+  transition: all 0.6s ease-in;
   opacity: 0.5;
-  transform: translateY(-200px) scale(0.9);
+  transform: translateX(-3500px) scale(0.85);
   overflow: hidden;
 }
 
 .v-enter-to {
   opacity: 1;
-  transform: translateY(0px) scale(1);
+  transform: translateX(0px) scale(1);
 }
 
 .v-leave-from {
   opacity: 1;
-  transform: translateY(0px) scale(1);
+  transform: translateX(0px) scale(1);
 }
 
 .v-leave-active {
-  transition: all 0.4s ease-in;
+  transition: all 0.6s ease-out;
   opacity: 0.5;
-  transform: translateY(200px) scale(0.8);
+  transform: translateX(350px) scale(0.7);
   overflow: hidden;
 }
 
 .v-leave-to {
   opacity: 0;
-  transform: translateY(400px) scale(0.9);
+  transform: translateX(700px) scale(0.85);
 }
 
 // .v-enter-active,

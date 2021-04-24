@@ -25,7 +25,7 @@ export default {
   flex-direction: column;
   background: #f2f1ef;
   background: #fefefe;
-  margin-top: auto;
+  // margin-top: auto;
   p {
     &:first-of-type {
       color: #0e8b21;
