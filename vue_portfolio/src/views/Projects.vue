@@ -55,7 +55,7 @@ export default {
           title: "My Portfolio Website",
           tech: "HTML, CSS (SCSS), JS (Vue)",
           description:
-            "The website you're currently viewing. This is a single page application designed and coded from scratch with Vue JS. No pre-built themes were used - just tips and tricks I've picked up along my journey with my own aesthetic mixed in. I was aiming for a modern and visually pleasing user experience while highlighting my abilities in Web Development. I appreciate you visiting!",
+            "The website you're currently viewing. This is a single page application designed and coded from scratch with Vue JS. No pre-built themes were used - just tips and tricks I've picked up along my journey with my own aesthetic mixed in. I was aiming for a modern and visually pleasing user experience while highlighting my abilities in modern Web Development.",
           image: "https://bombyxweb.com/imgs/portfolio_ss.png",
           color: "dark",
           link: "https://charlesmorris.com",
@@ -64,8 +64,8 @@ export default {
           title: "Bombyx Web",
           tech: "HTML, CSS, Bootstrap",
           description:
-            "Prototype for a modern and professional web development company called Bombyx. Structured with Bootstrap. Image carousel, accordion, scrollspy, parallax, and tasteful animations bring this website to life. Custom and original design. Fully responsive.",
-          image: "https://bombyxweb.com/imgs/christines_cartoons.jpg",
+            "Prototype for a modern and professional web development company called Bombyx. Built with the CSS framework Bootstrap. Image carousel, accordion, scrollspy, parallax, and tasteful animations bring this website to life. Custom and original design. Fully responsive.",
+          image: "https://bombyxweb.com/imgs/bombyx.jpg",
 
           color: "red",
           link: "https://www.bombyxweb.com",
@@ -75,7 +75,7 @@ export default {
           tech: "HTML, CSS (SCSS), Vanilla JavaScript",
           description:
             "Customized website built from scratch with collaboration from the client/artist. I aimed to create a modern and clean web design to highlight the client's artwork and storytelling. Custom image carousel built with JavaScript. Image compression used for faster loading times without compromising quality. Code not made public for privacy reasons. Website will be expanded with new features and frequent updates.",
-          image: "https://bombyxweb.com/imgs/bombyx.jpg",
+          image: "https://bombyxweb.com/imgs/christines_cartoons.jpg",
           color: "green",
           link: "https://christinescartoons.com",
         },

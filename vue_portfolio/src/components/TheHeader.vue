@@ -3,8 +3,8 @@
     <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-logo">
-          <router-link to="/">
-            <img src="../assets/cm_logo.png" alt="" />
+          <router-link to="/" @click="closeHamburger">
+            <img src="../assets/cm_logo.png" alt />
           </router-link>
         </div>
         <div class="navbar-list">
@@ -66,9 +66,7 @@
             isHoverOut: navHoverOutProjects,
           }"
         >
-          <router-link to="/projects" @click="closeHamburger"
-            >Projects</router-link
-          >
+          <router-link to="/projects" @click="closeHamburger">Projects</router-link>
         </li>
         <li
           @mouseover="hoverOverContact"
@@ -78,9 +76,7 @@
             isHoverOut: navHoverOutContact,
           }"
         >
-          <router-link to="/contact" @click="closeHamburger"
-            >Contact</router-link
-          >
+          <router-link to="/contact" @click="closeHamburger">Contact</router-link>
         </li>
       </ul>
     </nav>
@@ -105,7 +101,6 @@ export default {
     hoverOverHome() {
       this.navHoverHome = true;
       this.navHoverOutHome = false;
-      console.log(this.navHover);
     },
     hoverOutHome() {
       this.navHoverHome = false;
@@ -133,7 +128,19 @@ export default {
     },
     closeHamburger() {
       this.hamburgerOpen = false;
+      this.closeUnderline()
     },
+     closeUnderline() {
+      this.navHoverHome = false,
+      this.navHoverOutHome =  false,
+      this.navHoverProjects =false,
+      this.navHoverOutProjects = false,
+      this.navHoverContact = false,
+      this.navHoverOutContact = false
+     }
+    
+    
+   
   },
 };
 

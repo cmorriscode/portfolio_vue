@@ -15,7 +15,7 @@
         </div>
 
         <div class="logo-img">
-          <img src="../assets/cm_logo.png" alt />
+          <img src="../assets/cm_logo.png" alt="Charlie Morris Logo" />
         </div>
       </div>
     </div>
@@ -113,9 +113,9 @@ export default {
       .logo-img {
         display: flex;
         justify-content: center;
-        padding: 48px 24px;
+        padding: 48px 6px;
         img {
-          width: 270px;
+          width: 215px;
           max-width: 100%;
         }
       }

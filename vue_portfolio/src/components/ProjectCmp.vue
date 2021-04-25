@@ -8,8 +8,7 @@
     }"
   >
     <div class="project-img">
-      <!-- <img :src="image" alt="" /> -->
-      <img :src="image" alt="" />
+      <img :src="image" :alt="title" />
     </div>
     <div class="project-content">
       <div class="project-content--title">
@@ -19,16 +18,12 @@
             darkText: color === 'dark',
             greenText: color === 'green',
           }"
-        >
-          {{ title }}
-        </h4>
+        >{{ title }}</h4>
       </div>
       <div class="project-content--tech">
         <p>{{ tech }}</p>
       </div>
-      <div class="project-content--description">
-        {{ description }}
-      </div>
+      <div class="project-content--description">{{ description }}</div>
       <div class="project-content--btns">
         <main-btn class="spacer" :link="link">View Site</main-btn>
         <main-btn class="outline">View Code</main-btn>
@@ -145,7 +140,7 @@ a {
     padding: 32px 20px;
     max-width: 980px;
     margin: 48px auto;
-    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+
     display: grid;
     grid-gap: 36px;
     grid-template-columns: 1fr;
