@@ -114,8 +114,10 @@ export default {
         display: flex;
         justify-content: center;
         padding: 48px 6px;
+        margin-top: 16px;
         img {
-          width: 215px;
+          width: 235px;
+          height: 181px;
           max-width: 100%;
         }
       }
