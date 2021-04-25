@@ -28,7 +28,7 @@ export default {
 .v-enter-active {
   transition: all 0.35s ease-in;
   opacity: 0.5;
-  transform: translateX(-3500px) scale(0.85);
+  transform: translateX(-350px) scale(0.85);
   overflow: hidden;
 }
 
