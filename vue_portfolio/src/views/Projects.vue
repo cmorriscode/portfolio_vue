@@ -110,8 +110,8 @@ export default {
           tech: "HTML, CSS (SCSS), JS (Vue)",
           description:
             "Beautiful todo app that allows you to track and organize your daily tasks. Create events, todos based off priority, and notes to help you stay productive. Return to your data as all information is stored locally and indefinitely inside your browser's local storage. Designed and developed by me.",
-          image: "https://bombyxweb.com/imgs/portfolio_ss.png",
-          color: "dark",
+          image: "https://christinescartoons.com/img/tabbytodo_screenshot.png",
+          color: "blue",
           link: "https://tabbytodo.com",
         },
       ],

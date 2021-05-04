@@ -5,6 +5,7 @@
       dark: color === 'dark',
       red: color === 'red',
       green: color === 'green',
+      blue: color === 'blue',
     }"
   >
     <div class="project-img">
@@ -17,8 +18,11 @@
             redText: color === 'red',
             darkText: color === 'dark',
             greenText: color === 'green',
+            blueText: color === 'blue',
           }"
-        >{{ title }}</h4>
+        >
+          {{ title }}
+        </h4>
       </div>
       <div class="project-content--tech">
         <p>{{ tech }}</p>
@@ -65,6 +69,14 @@ a {
 
 .greenText {
   color: #12ba2b !important;
+}
+
+.blue {
+  border-color: hsl(202, 100%, 31%) !important;
+}
+
+.blueText {
+  color: hsl(202, 100%, 31%) !important;
 }
 
 .project {
