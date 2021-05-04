@@ -35,6 +35,31 @@
             ></project-cmp>
           </div>
         </div>
+
+        <div class="apps-separator">
+          <div class="apps-text">
+            <div class="apps-text--div">
+              <p>A</p>
+              <p>p</p>
+              <p>p</p>
+              <p>s</p>
+            </div>
+          </div>
+          <div class="apps">
+            <h3>Apps</h3>
+            <div class="underline"></div>
+            <project-cmp
+              v-for="app in apps"
+              :color="app.color"
+              :title="app.title"
+              :tech="app.tech"
+              :description="app.description"
+              :image="app.image"
+              :key="app.title"
+              :link="app.link"
+            ></project-cmp>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -49,7 +74,6 @@ export default {
 
   data() {
     return {
-     
       projects: [
         {
           title: "My Portfolio Website",
@@ -80,18 +104,31 @@ export default {
           link: "https://christinescartoons.com",
         },
       ],
+      apps: [
+        {
+          title: "TabbyTodo",
+          tech: "HTML, CSS (SCSS), JS (Vue)",
+          description:
+            "Beautiful todo app that allows you to track and organize your daily tasks. Create events, todos based off priority, and notes to help you stay productive. Return to your data as all information is stored locally and indefinitely inside your browser's local storage. Designed and developed by me.",
+          image: "https://bombyxweb.com/imgs/portfolio_ss.png",
+          color: "dark",
+          link: "https://tabbytodo.com",
+        },
+      ],
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.websites-separator {
+.websites-separator,
+.apps-separator {
   display: flex;
   justify-content: center;
 }
 
-.website-text {
+.website-text,
+.apps-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,7 +154,8 @@ export default {
     margin: 0 auto;
   }
 
-  .websites {
+  .websites,
+  .apps {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,13 +193,15 @@ export default {
 }
 
 @media (max-width: 900px) {
-  .websites-separator {
+  .websites-separator,
+  .apps-separator {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
-  .website-text {
+  .website-text,
+  .apps-text {
     display: none;
 
     // align-items: center;
@@ -182,7 +222,8 @@ export default {
   .main {
     margin-top: 48px;
 
-    .websites {
+    .websites,
+    .apps {
       h3 {
         display: block;
       }
